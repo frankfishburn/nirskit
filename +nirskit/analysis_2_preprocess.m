@@ -6,7 +6,7 @@ function analysis_2_preprocess(varargin)
 %   nirskit.analysis_2_preprocessing;
 %
 %   % More typical approach with reasonable parameters supplied
-%   nirskit.analysis_2_preprocessing('PreTrim',3,'PostTrim',12,'MotionCorrection','TDDR','DCTPeriod',128,'ResampleRate',4);
+%   nirskit.analysis_2_preprocessing('PreTrim',3,'PostTrim',12,'MotionCorrection','TDDR','DCTPeriod',128,'Resample',4);
 %
 % List of optional key-value parameters:
 %   InputDirectory   - Location of prepared Results.mat file            (default: current directory)
@@ -17,7 +17,7 @@ function analysis_2_preprocess(varargin)
 %   LPF              - Cutoff in Hz for low-pass IIR filter             (default: disabled)
 %   HPF              - Cutoff in Hz for high-pass IIR filter            (default: disabled)
 %   DCTPeriod        - # of seconds DCT detrending cutoff               (default: disabled)
-%   ResampleRate     - Target sample rate for resampling                (default: disabled)
+%   Resample         - Target sample rate for resampling                (default: disabled)
 %   ARPrewhiten      - max model order (in seconds) for AR prewhitening (default: disabled)
 %
 % Note:
@@ -37,7 +37,7 @@ defaultMotionCorrection = [];
 defaultLPF = [];
 defaultHPF = [];
 defaultDCTPeriod = [];
-defaultResampleRate = [];
+defaultResample = [];
 defaultARPrewhiten = [];
 
 %% Parse inputs
@@ -51,7 +51,7 @@ addParameter(p,'MotionCorrection',defaultMotionCorrection,ismodule);
 addParameter(p,'LPF',defaultLPF,@isnumeric);
 addParameter(p,'HPF',defaultHPF,@isnumeric);
 addParameter(p,'DCTPeriod',defaultDCTPeriod,@isnumeric);
-addParameter(p,'ResampleRate',defaultResampleRate,@isnumeric);
+addParameter(p,'Resample',defaultResample,@isnumeric);
 addParameter(p,'ARPrewhiten',defaultARPrewhiten,@isnumeric);
 
 parse(p,varargin{:});
@@ -72,8 +72,8 @@ end
 if ~isempty(p.Results.MotionCorrection)
     out_dir = strcat( out_dir , '_MotionCorrection-' , p.Results.MotionCorrection );
 end
-if ~isempty(p.Results.ResampleRate)
-    out_dir = strcat( out_dir , '_ResampleRate-' , num2str(p.Results.ResampleRate)  , 'Hz' );
+if ~isempty(p.Results.Resample)
+    out_dir = strcat( out_dir , '_Resample-' , num2str(p.Results.Resample)  , 'Hz' );
 end
 if ~isempty(p.Results.LPF)
     out_dir = strcat( out_dir , '_LPF-' , num2str(p.Results.LPF)  , 'Hz' );
@@ -145,10 +145,10 @@ if ~isempty(p.Results.LPF)
 end
 
 % Resampling
-if ~isempty(p.Results.ResampleRate)
+if ~isempty(p.Results.Resample)
     job = nirs.modules.Resample( job );
         job.antialias = true;
-        job.Fs = p.Results.ResampleRate;
+        job.Fs = p.Results.Resample;
 end
 
 % High-pass filter
