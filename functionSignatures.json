@@ -1,0 +1,69 @@
+{
+"_schemaVersion": "1.0.0",
+
+"nirskit.analysis_2_preprocess":
+{
+    "inputs":
+    [
+        {"name":"InputDirectory", "kind":"namevalue", "type":["folder"]},
+        {"name":"OutputPrefix", "kind":"namevalue", "type":[["char"],["string"]]},
+        {"name":"PreTrim", "kind":"namevalue", "type":["numeric"]},
+        {"name":"PostTrim", "kind":"namevalue", "type":["numeric"]},
+        {"name":"MotionCorrection", "kind":"namevalue", "type":"choices={'none','TDDR'}"},
+        {"name":"LPF", "kind":"namevalue", "type":["numeric"]},
+        {"name":"HPF", "kind":"namevalue", "type":["numeric"]},
+        {"name":"DCTPeriod", "kind":"namevalue", "type":["numeric"]},
+        {"name":"Resample", "kind":"namevalue", "type":["numeric"]},
+        {"name":"ARPrewhiten", "kind":"namevalue", "type":["numeric"]}
+    ]   
+},
+
+"nirskit.analysis_3_activation_indiv":
+{
+    "inputs":
+    [
+        {"name":"InputDirectory", "kind":"namevalue", "type":["folder"]},
+        {"name":"OutputPrefix", "kind":"namevalue", "type":[["char"],["string"]]},
+        {"name":"Conditions", "kind":"namevalue", "type":[["char"],["string"]]},
+        {"name":"Blocks2Conditions", "kind":"namevalue", "type":"choices={true,false}"},
+        {"name":"ModelNull", "kind":"namevalue", "type":[["logical"],["scalar"]]},
+        {"name":"Type", "kind":"namevalue", "type":"choices={'OLS','AR-IRLS','NIRS-SPM','MV-GLM','Nonlinear'}"},
+        {"name":"PeakTime", "kind":"namevalue", "type":["numeric"]},        
+        {"name":"InclDeriv", "kind":"namevalue", "type":[["logical"],["scalar"]]},
+        {"name":"SumDeriv", "kind":"namevalue", "type":[["logical"],["scalar"]]},
+        {"name":"TrendFunc", "kind":"namevalue", "type":["@(args) func"]},
+        {"name":"SaveResiduals", "kind":"namevalue", "type":[["logical"],["scalar"]]}
+    ]   
+},
+
+"nirskit.analysis_4_activation_group":
+{
+    "inputs":
+    [
+        {"name":"InputDirectory", "kind":"namevalue", "type":["folder"]},
+        {"name":"OutputPrefix", "kind":"namevalue", "type":[["char"],["string"]]},
+        {"name":"Conditions", "kind":"namevalue", "type":[["char"],["string"]]},
+        {"name":"Formula", "kind":"namevalue", "type":[["char"],["string"]]},
+        {"name":"Weighted", "kind":"namevalue", "type":"choices={true,false}"},
+        {"name":"Robust", "kind":"namevalue", "type":[["logical"],["scalar"]]},
+        {"name":"InclDiag", "kind":"namevalue", "type":[["logical"],["scalar"]]},
+        {"name":"SubjectThreshold", "kind":"namevalue", "type":["numeric"]}
+    ]   
+},
+
+"nirskit.analysis_5_draw":
+{
+    "inputs":
+    [
+        {"name":"InputDirectory", "kind":"namevalue", "type":["folder"]},
+        {"name":"OutputPrefix", "kind":"namevalue", "type":[["char"],["string"]]},
+        {"name":"Types", "kind":"namevalue", "type":[["char"],["string"]]},
+        {"name":"Contrasts", "kind":"namevalue", "type":[["char"],["string"]]},
+        {"name":"RespVar", "kind":"namevalue", "type":["choices={'beta','tstat'}"]},
+        {"name":"Threshold", "kind":"namevalue", "type":[["char"],["string"]]},
+        {"name":"CLim", "kind":"namevalue", "type":[["numeric"],["size=1,2"]]},
+        {"name":"Save", "kind":"namevalue", "type":[["logical"],["scalar"]]},
+        {"name":"View", "kind":"namevalue", "type":[["logical"],["scalar"]]}
+    ]   
+}
+}
