@@ -142,6 +142,7 @@ if ~isempty(p.Results.LPF)
     job = eeg.modules.BandPassFilter( job );
     job.lowpass = p.Results.LPF;
     job.highpass = [];
+    job.do_downsample = false;
 end
 
 % Resampling
@@ -156,6 +157,7 @@ if ~isempty(p.Results.HPF)
     job = eeg.modules.BandPassFilter( job );
     job.lowpass = [];
     job.highpass = p.Results.HPF;
+    job.do_downsample = false;
 end
 
 % DCT detrending
