@@ -66,6 +66,18 @@
     ]   
 },
 
+"nirskit.analysis_4_connectivity_group":
+{
+    "inputs":
+    [
+        {"name":"InputDirectory", "kind":"namevalue", "type":["folder"]},
+        {"name":"OutputPrefix", "kind":"namevalue", "type":[["char"],["string"]]},
+        {"name":"Conditions", "kind":"namevalue", "type":[["char"],["string"]]},
+        {"name":"Formula", "kind":"namevalue", "type":[["char"],["string"]]},
+        {"name":"Robust", "kind":"namevalue", "type":[["logical"],["scalar"]]}
+    ]
+},
+
 "nirskit.analysis_5_draw":
 {
     "inputs":
