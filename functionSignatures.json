@@ -36,6 +36,21 @@
     ]   
 },
 
+"nirskit.analysis_3_connectivity_indiv":
+{
+    "inputs":
+    [
+        {"name":"InputDirectory", "kind":"namevalue", "type":["folder"]},
+        {"name":"OutputPrefix", "kind":"namevalue", "type":[["char"],["string"]]},
+        {"name":"Conditions", "kind":"namevalue", "type":[["char"],["string"]]},
+        {"name":"DivideEvents", "kind":"namevalue", "type":[["logical"],["scalar"]]},
+        {"name":"Ignore", "kind":"namevalue", "type":["numeric"]},
+        {"name":"MinEventDuration", "kind":"namevalue", "type":["numeric"]},
+        {"name":"ModelOrder", "kind":"namevalue", "type":[["numeric"],["char"]]},
+        {"name":"Robust", "kind":"namevalue", "type":[["logical"],["scalar"]]}
+    ]
+},
+
 "nirskit.analysis_4_activation_group":
 {
     "inputs":
