@@ -22,11 +22,9 @@ function analysis_4_activation_group(varargin)
 % Note:
 %   The default options are minimalistic, so you will most likely want to supply parameters
 %
-%   See also NIRSKIT.ANALYSIS_1_PREPARE,
-%   NIRSKIT.ANALYSIS_2_PREPROCESSING,
-%   NIRSKIT.ANALYSIS_3_ACTIVATION_INDIV,
-%   NIRSKIT.ANALYSIS_5a_CONNECTIVITY_INDIV,
-%   NIRSKIT.ANALYSIS_5b_HYPERSCANNING_INDIV
+%   See also
+%   NIRSKIT.ANALYSIS_3_ACTIVATION_INDIV
+%   NIRSKIT.ANALYSIS_5_DRAW
 
 %% Set defaults
 defaultInputDirectory = pwd;

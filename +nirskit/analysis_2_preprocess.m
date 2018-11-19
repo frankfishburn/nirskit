@@ -23,10 +23,9 @@ function analysis_2_preprocess(varargin)
 % Note:
 %   The default options are minimalistic, so you will most likely want to supply parameters
 %
-%   See also NIRSKIT.ANALYSIS_1_PREPARE,
-%   NIRSKIT.ANALYSIS_3_ACTIVATION_INDIV,
-%   NIRSKIT.ANALYSIS_5a_CONNECTIVITY_INDIV
-%   NIRSKIT.ANALYSIS_5b_HYPERSCANNING_INDIV
+%   See also
+%   NIRSKIT.ANALYSIS_3_ACTIVATION_INDIV
+%   NIRSKIT.ANALYSIS_3_CONNECTIVITY_INDIV
 
 %% Set defaults
 defaultInputDirectory = pwd;

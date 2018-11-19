@@ -20,7 +20,8 @@ function analysis_3_connectivity_indiv(varargin)
 %                       (0 disables AR modeling)
 %   Robust            - Whether to use robust correlation                  (default: true)
 %
-%   See also NIRSKIT.ANALYSIS_2_PREPROCESSING,
+%   See also
+%   NIRSKIT.ANALYSIS_2_PREPROCESS
 %   NIRSKIT.ANALYSIS_4_CONNECTIVITY_GROUP
 
 %% Set defaults

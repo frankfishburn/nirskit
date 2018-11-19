@@ -19,10 +19,9 @@ function analysis_5_draw(varargin)
 %   Save             - Boolean of whether to save to disk               (default: false)
 %   View             - View specification ("2D", "3D mesh (Frontal)")   (default: probe default)
 %
-%   See also NIRSKIT.ANALYSIS_1_PREPARE,
-%   NIRSKIT.ANALYSIS_2_PREPROCESSING,
-%   NIRSKIT.ANALYSIS_3_ACTIVATION_INDIV,
-%   NIRSKIT.ANALYSIS_4_ACTIVATION_GROUP,
+%   See also
+%   NIRSKIT.ANALYSIS_4_ACTIVATION_GROUP
+%   NIRSKIT.ANALYSIS_4_CONNECTIVITY_GROUP
 
 %% Set defaults
 defaultInputDirectory = pwd;

@@ -24,7 +24,8 @@ function analysis_3_activation_indiv(varargin)
 %   SaveResiduals     - Whether to save residuals                          (default: false)
 %                       in <output_dir>/residuals/Results.mat
 %
-%   See also NIRSKIT.ANALYSIS_2_PREPROCESSING,
+%   See also
+%   NIRSKIT.ANALYSIS_2_PREPROCESS
 %   NIRSKIT.ANALYSIS_4_ACTIVATION_GROUP
 
 %% Set defaults
