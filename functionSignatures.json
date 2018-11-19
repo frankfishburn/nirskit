@@ -25,7 +25,7 @@
         {"name":"InputDirectory", "kind":"namevalue", "type":["folder"]},
         {"name":"OutputPrefix", "kind":"namevalue", "type":[["char"],["string"]]},
         {"name":"Conditions", "kind":"namevalue", "type":[["char"],["string"]]},
-        {"name":"Blocks2Conditions", "kind":"namevalue", "type":"choices={true,false}"},
+        {"name":"Blocks2Conditions", "kind":"namevalue", "type":[["logical"],["scalar"]]},
         {"name":"ModelNull", "kind":"namevalue", "type":[["logical"],["scalar"]]},
         {"name":"Type", "kind":"namevalue", "type":"choices={'OLS','AR-IRLS','NIRS-SPM','MV-GLM','Nonlinear'}"},
         {"name":"PeakTime", "kind":"namevalue", "type":["numeric"]},        
@@ -44,7 +44,7 @@
         {"name":"OutputPrefix", "kind":"namevalue", "type":[["char"],["string"]]},
         {"name":"Conditions", "kind":"namevalue", "type":[["char"],["string"]]},
         {"name":"Formula", "kind":"namevalue", "type":[["char"],["string"]]},
-        {"name":"Weighted", "kind":"namevalue", "type":"choices={true,false}"},
+        {"name":"Weighted", "kind":"namevalue", "type":[["logical"],["scalar"]]},
         {"name":"Robust", "kind":"namevalue", "type":[["logical"],["scalar"]]},
         {"name":"InclDiag", "kind":"namevalue", "type":[["logical"],["scalar"]]},
         {"name":"SubjectThreshold", "kind":"namevalue", "type":["numeric"]}
